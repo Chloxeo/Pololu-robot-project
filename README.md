@@ -107,7 +107,9 @@ L'arrêt se fait en mettant la puissance à zéro sur les deux moteurs. Ces fonc
 #### <ins>Suivi de la ligne
 Si les fonctions précédentes permettent d'effectuer des virages fixes, le suivi fluide d'une ligne noire nécessite un contrôle plus fin.  c'est ici qu'intervient la **régulation PI** (Proportionnelle + Intégrale). A partir de l'erreur definie dans la section précédente on peut calculer les commandes à injecter dans nos moteurs permettant de corriger la trajectoire au cours du temps : 
 
-$commande = K_P \cdot (\text{erreur} - \text{erreur}_{\text{préc}}) + K_I \cdot \text{erreur}_{\text{préc}} \cdot (t - t_{\text{préc}}) + \text{commande}_{\text{préc}}$
+$$
+\text{Commande} = K_P \cdot \text{erreur} - \text{erreur}_{\text{prec}} + K_I \cdot \text{erreur}_{\text{prec}} \cdot (t - t_{\text{prec}}) + \text{commande}_{\text{prec}}
+$$
 
 - Le terme proportionnel `KP` corrige rapidement les écarts.
 
